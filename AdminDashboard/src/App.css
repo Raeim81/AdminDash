@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d2634;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 250px auto; /* Adjust width as per your sidebar width */
+  height: 100vh; 
+  grid-template-areas: 
+    'sidebar header'
+    'sidebar main'
+    'sidebar footer';
+    grid-template-rows: 60px auto 40px;
+    
+}
+
+
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+
+.header {
+  
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.footer {
+  
+  background-color:grey; /* footer background color */
+  color: whitesmoke; /* footer text color */
+ padding-top: 15px;
+  box-shadow: 0 -2px 5px -2px rgba(0, 0, 0, 0.35); /* optional shadow for aesthetics */
+  height: 40px;
+  display: flex;
+  justify-content: center; /* center the footer content */
+  align-items: center;
+}
+
+.chart-container  {
+  display: inline-block;
+  width: 80%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+  gap: 5px;
+  height: 400px;
+}
+#cards {
+ 
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+ border-radius: 10px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ 
+ }
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  width: 250px;
+  background-color: #263043;
+  overflow-y: auto;
+  transition: all 0.5s;
+ 
+}
+
+.sidebar-title {
+  
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+.auth-button {
+  /* Your button styles here */
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Example style */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* END  */  
+
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .row .col-lg-4 {
+    /* CSS styles for col-lg-4 at min-width: 1201px and max-width: 1600px */
+    margin-right: 20px; /* Example adjustment */
+    chart-container {
+      width: 90%;
+      position: fixed;
+    } ;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+     /* Adjust the width to 50%, two boxes per row */
+    max-width: 50%;
+  }
+  
+  .card {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0;
+  
+  }
+
+
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust the box sizing to make them smaller */
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+     /* Adjust the width to 50%, two boxes per row */
+    max-width: 50%;
+  }
+  
+  .card {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0;
+  
+  }
+
+
+
+}
+  /* Reset margins to ensure alignment and spacing */
+
+
+  /* If there's specific styling needed for the bar chart, you can target it with its ID */
+  
+
+
+
+
+
+ 
+
